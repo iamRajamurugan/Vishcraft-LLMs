@@ -9,7 +9,7 @@ import streamlit as st
 google_api_key = st.secrets["GOOGLE_API_KEY"]["GOOGLE_API_KEY"]
 # Load Gemini API key
 #load_dotenv()
-#genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+genai.configure(api_key=google_api_key)
 model = genai.GenerativeModel("gemini-2.0-flash")
 
 def get_enhanced_resume_section(resume_section, target_title, key_skills, achievement, tone, focus_area, keywords, resume_length="1 page"):
